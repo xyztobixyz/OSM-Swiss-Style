@@ -27,15 +27,12 @@
   "Layer": [
     {
       "Datasource": {
-        "dbname": "osmswissfinal",
+        "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.3.0/physical/10m-land.zip",
-        "host": "152.96.80.47",
         "id": "land",
-        "password": "postgres",
         "project": "foss4g-2011",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "user": "postgres"
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "class": "shp",
       "geometry": "polygon",
@@ -44,42 +41,6 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "status": "on"
-    },
-    {
-      "Datasource": {
-        "file": "D:\\OSMBright\\coastline-good.shp"
-      },
-      "class": "shp",
-      "geometry": "polygon",
-      "id": "processed_p",
-      "name": "processed_p",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
-      "extent": [
-        -179.99999692067183,
-        -85.051,
-        179.99999692067183,
-        83.66933299999998
-      ],
-      "advanced": {}
-    },
-    {
-      "Datasource": {
-        "file": "D:\\OSMBright\\shoreline_300.shp"
-      },
-      "class": "shp",
-      "geometry": "polygon",
-      "id": "shoreline_300",
-      "name": "shoreline_300",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
-      "extent": [
-        -179.99999692067183,
-        -85.051,
-        179.99999692067183,
-        83.66933299999998
-      ],
-      "advanced": {}
     },
     {
       "extent": [
@@ -95,11 +56,7 @@
         "geometry_field": "",
         "extent_cache": "auto",
         "extent": "659813.88,5750374.59,1182679.42,6075766.21",
-        "host": "152.96.80.47",
-        "port": "5432",
-        "user": "postgres",
-        "password": "postgres",
-        "dbname": "osmswissfinal"
+        "dbname": "gis"
       },
       "id": "glacier_gen0",
       "class": "",
@@ -122,11 +79,7 @@
         "geometry_field": "",
         "extent_cache": "auto",
         "extent": "659813.88,5750374.59,1182679.42,6075766.21",
-        "host": "152.96.80.47",
-        "port": "5432",
-        "user": "postgres",
-        "password": "postgres",
-        "dbname": "osmswissfinal"
+        "dbname": "gis"
       },
       "id": "glacier_gen1",
       "class": "",
@@ -149,11 +102,7 @@
         "geometry_field": "",
         "extent_cache": "auto",
         "extent": "659813.88,5750374.59,1182679.42,6075766.21",
-        "host": "152.96.80.47",
-        "port": "5432",
-        "user": "postgres",
-        "password": "postgres",
-        "dbname": "osmswissfinal"
+        "dbname": "gis"
       },
       "id": "glacier",
       "class": "",
@@ -164,18 +113,15 @@
     },
     {
       "Datasource": {
-        "dbname": "osmswissfinal",
+        "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "152.96.80.47",
         "id": "landuse_gen0",
         "key_field": "",
-        "password": "postgres",
         "project": "osm-bright-imposm",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, way_area AS area, COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type\n  FROM planet_osm_polygon\n  WHERE way_area > 100000\n  ORDER BY way_area DESC\n) AS data",
-        "type": "postgis",
-        "user": "postgres"
+        "type": "postgis"
       },
       "class": "",
       "geometry": "multipolygon",
@@ -187,18 +133,15 @@
     },
     {
       "Datasource": {
-        "dbname": "osmswissfinal",
+        "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "152.96.80.47",
         "id": "landuse_gen1",
         "key_field": "",
-        "password": "postgres",
         "project": "osm-bright-imposm",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, way_area AS area, COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type\n  FROM planet_osm_polygon\n  WHERE way_area > 10000\n  ORDER BY way_area DESC\n) AS data",
-        "type": "postgis",
-        "user": "postgres"
+        "type": "postgis"
       },
       "class": "",
       "geometry": "multipolygon",
@@ -210,18 +153,15 @@
     },
     {
       "Datasource": {
-        "dbname": "osmswissfinal",
+        "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "152.96.80.47",
         "id": "landuse",
         "key_field": "",
-        "password": "postgres",
         "project": "osm-bright-imposm",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, way_area AS area, COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type\n  FROM planet_osm_polygon\n  ORDER BY way_area DESC\n) AS data",
-        "type": "postgis",
-        "user": "postgres"
+        "type": "postgis"
       },
       "class": "",
       "geometry": "polygon",
@@ -233,18 +173,15 @@
     },
     {
       "Datasource": {
-        "dbname": "osmswissfinal",
+        "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "152.96.80.47",
         "id": "waterway",
         "key_field": "",
-        "password": "postgres",
         "project": "foss4g-2011",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, waterway AS type\n  FROM planet_osm_line\n  WHERE waterway IN ('river', 'canal')\n) AS data",
-        "type": "postgis",
-        "user": "postgres"
+        "type": "postgis"
       },
       "class": "",
       "geometry": "linestring",
@@ -256,15 +193,12 @@
     },
     {
       "Datasource": {
-        "dbname": "osmswissfinal",
+        "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "152.96.80.47",
         "key_field": "",
-        "password": "postgres",
         "table": "( SELECT way, waterway AS type\n  FROM planet_osm_line\n  WHERE waterway IN ('river', 'canal', 'stream')\n) AS data",
-        "type": "postgis",
-        "user": "postgres"
+        "type": "postgis"
       },
       "class": "",
       "geometry": "linestring",
@@ -275,15 +209,12 @@
     },
     {
       "Datasource": {
-        "dbname": "osmswissfinal",
+        "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "152.96.80.47",
         "key_field": "",
-        "password": "postgres",
         "table": "( SELECT way, waterway AS type\n  FROM planet_osm_line\n  WHERE waterway IN ('river', 'canal', 'stream', 'ditch', 'drain')\n) AS data",
-        "type": "postgis",
-        "user": "postgres"
+        "type": "postgis"
       },
       "class": "",
       "geometry": "linestring",
@@ -294,18 +225,15 @@
     },
     {
       "Datasource": {
-        "dbname": "osmswissfinal",
+        "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "152.96.80.47",
         "id": "water_gen0",
         "key_field": "",
-        "password": "postgres",
         "project": "foss4g-2011",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, \"natural\" AS type, way_area AS area\n  FROM planet_osm_polygon\n  WHERE (\"natural\" IN ('water', 'pond')\n    OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank', 'stream'))\n    AND way_area > 10000\n) AS data",
-        "type": "postgis",
-        "user": "postgres"
+        "type": "postgis"
       },
       "class": "",
       "geometry": "polygon",
@@ -317,18 +245,15 @@
     },
     {
       "Datasource": {
-        "dbname": "osmswissfinal",
+        "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "152.96.80.47",
         "id": "water_gen1",
         "key_field": "",
-        "password": "postgres",
         "project": "foss4g-2011",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, \"natural\" AS type, way_area AS area\n  FROM planet_osm_polygon\n  WHERE (\"natural\" IN ('water', 'pond')\n    OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank', 'stream'))\n    AND way_area > 1000\n) AS data",
-        "type": "postgis",
-        "user": "postgres"
+        "type": "postgis"
       },
       "class": "",
       "geometry": "polygon",
@@ -340,18 +265,15 @@
     },
     {
       "Datasource": {
-        "dbname": "osmswissfinal",
+        "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "152.96.80.47",
         "id": "water",
         "key_field": "",
-        "password": "postgres",
         "project": "foss4g-2011",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, way_area AS area\n  FROM planet_osm_polygon\n  WHERE \"natural\" IN ('water', 'pond')\n    OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank', 'stream')\n) AS data",
-        "type": "postgis",
-        "user": "postgres"
+        "type": "postgis"
       },
       "class": "",
       "geometry": "polygon",
@@ -363,18 +285,15 @@
     },
     {
       "Datasource": {
-        "dbname": "osmswissfinal",
+        "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "152.96.80.47",
         "id": "landuse_overlays",
         "key_field": "",
-        "password": "postgres",
         "project": "osm-bright-imposm",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, way_area AS area, COALESCE(leisure) AS type\n  FROM planet_osm_polygon\n  WHERE leisure = 'nature_reserve'\n  ORDER BY way_area DESC\n) AS data",
-        "type": "postgis",
-        "user": "postgres"
+        "type": "postgis"
       },
       "class": "",
       "geometry": "polygon",
@@ -394,7 +313,7 @@
       "id": "swisshills",
       "class": "",
       "Datasource": {
-        "file": "img\\swiss-hills.tif"
+        "file": "img/swiss-hills.tif"
       },
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
@@ -403,17 +322,14 @@
     },
     {
       "Datasource": {
-        "dbname": "osmswissfinal",
+        "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "152.96.80.47",
         "id": "admin",
         "key_field": "",
-        "password": "postgres",
         "project": "osm-bright-imposm",
         "table": "( SELECT way, admin_level\n  FROM planet_osm_line\n  WHERE boundary = 'administrative'\n    AND admin_level IN ('2','3','4')\n) AS data",
-        "type": "postgis",
-        "user": "postgres"
+        "type": "postgis"
       },
       "class": "",
       "geometry": "linestring",
@@ -424,15 +340,12 @@
     },
     {
       "Datasource": {
-        "dbname": "osmswissfinal",
+        "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "152.96.80.47",
         "key_field": "",
-        "password": "postgres",
         "table": "( SELECT way, \"building\" AS type\n  FROM planet_osm_polygon\n  WHERE building NOT IN ('0','false', 'no')\n  ORDER BY ST_YMin(ST_Envelope(way)) DESC\n) AS data",
-        "type": "postgis",
-        "user": "postgres"
+        "type": "postgis"
       },
       "class": "",
       "geometry": "polygon",
@@ -443,18 +356,15 @@
     },
     {
       "Datasource": {
-        "dbname": "osmswissfinal",
+        "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "152.96.80.47",
         "id": "aeroway",
         "key_field": "",
-        "password": "postgres",
         "project": "foss4g-2011",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, aeroway AS type\n  FROM planet_osm_line\n  WHERE aeroway IN ('apron', 'runway', 'taxiway')\n) AS data",
-        "type": "postgis",
-        "user": "postgres"
+        "type": "postgis"
       },
       "class": "",
       "geometry": "linestring",
@@ -466,18 +376,15 @@
     },
     {
       "Datasource": {
-        "dbname": "osmswissfinal",
+        "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "152.96.80.47",
         "id": "tunnel",
         "key_field": "",
-        "password": "postgres",
         "project": "osm-bright-master",
         "srs": null,
         "table": "( SELECT way, COALESCE(highway, railway) AS type, 0 AS bridge, access, render, layer, 1 as tunnel,\n  CASE\n    WHEN highway IN ('motorway', 'trunk') THEN 'motorway'\n    WHEN highway IN ('primary', 'secondary') THEN 'mainroad'\n    WHEN highway IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'\n    WHEN highway IN ('service', 'track') THEN 'service'\n    WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'\n    WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    ELSE 'other' END AS stylegroup\n  FROM (\n    SELECT *, '1_outline' AS render FROM planet_osm_line\n    WHERE tunnel NOT IN ('', '0', 'no')\n    UNION ALL\n    SELECT *, '2_line' AS render FROM planet_osm_line\n    WHERE tunnel NOT IN ('', '0', 'no')\n    UNION ALL\n    SELECT *, '3_inline' AS render FROM planet_osm_line\n    WHERE tunnel NOT IN ('', '0', 'no')\n  ) AS tunnels\n  ORDER BY layer ASC, render ASC\n) AS data",
-        "type": "postgis",
-        "user": "postgres"
+        "type": "postgis"
       },
       "class": "",
       "geometry": "linestring",
@@ -488,18 +395,15 @@
     },
     {
       "Datasource": {
-        "dbname": "osmswissfinal",
+        "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "152.96.80.47",
         "id": "turning_circle_case",
         "key_field": "",
-        "password": "postgres",
         "project": "osm-bright-master",
         "srs": null,
         "table": "( SELECT way \n  FROM planet_osm_point \n  WHERE highway = 'turning_circle'\n) AS data",
-        "type": "postgis",
-        "user": "postgres"
+        "type": "postgis"
       },
       "class": "",
       "geometry": "point",
@@ -510,18 +414,15 @@
     },
     {
       "Datasource": {
-        "dbname": "osmswissfinal",
+        "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "152.96.80.47",
         "id": "roads_high",
         "key_field": "",
-        "password": "postgres",
         "project": "osm-bright-master",
         "srs": null,
         "table": "( SELECT way, COALESCE(highway, railway) AS type, 0 AS tunnel, 0 AS bridge, access, 'fill' AS render,\n  CASE\n    WHEN highway IN ('motorway', 'trunk') THEN 'motorway'\n    WHEN highway IN ('primary', 'secondary') THEN 'mainroad'\n    WHEN highway IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'\n    WHEN highway IN ('service', 'track') THEN 'service'\n    WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'\n    WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    ELSE 'other' END AS stylegroup\n  FROM planet_osm_line\n  WHERE (highway IS NOT NULL OR railway IS NOT NULL)\n    AND (tunnel IS NULL OR tunnel = 'no')\n    AND (bridge IS NULL OR bridge = 'no')\n  ORDER BY z_order\n) AS data",
-        "type": "postgis",
-        "user": "postgres"
+        "type": "postgis"
       },
       "class": "",
       "geometry": "linestring",
@@ -532,15 +433,12 @@
     },
     {
       "Datasource": {
-        "dbname": "osmswissfinal",
+        "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "152.96.80.47",
         "key_field": "",
-        "password": "postgres",
         "table": "( SELECT way, highway AS type\n  FROM planet_osm_roads\n  WHERE highway IN ('motorway', 'trunk', 'primary', 'secondary', 'motorway_link', 'trunk_link')\n) AS data",
-        "type": "postgis",
-        "user": "postgres"
+        "type": "postgis"
       },
       "class": "",
       "geometry": "linestring",
@@ -551,15 +449,12 @@
     },
     {
       "Datasource": {
-        "dbname": "osmswissfinal",
+        "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "152.96.80.47",
         "key_field": "",
-        "password": "postgres",
         "table": "( SELECT way, highway AS type, bridge, tunnel\n    FROM planet_osm_roads\n    WHERE highway IN ('motorway', 'trunk')\n) AS data",
-        "type": "postgis",
-        "user": "postgres"
+        "type": "postgis"
       },
       "class": "",
       "geometry": "linestring",
@@ -571,15 +466,12 @@
     },
     {
       "Datasource": {
-        "dbname": "osmswissfinal",
+        "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "152.96.80.47",
         "key_field": "",
-        "password": "postgres",
         "table": "( SELECT way \n  FROM planet_osm_point\n  WHERE highway = 'turning_circle'\n) AS data",
-        "type": "postgis",
-        "user": "postgres"
+        "type": "postgis"
       },
       "class": "",
       "geometry": "point",
@@ -590,18 +482,15 @@
     },
     {
       "Datasource": {
-        "dbname": "osmswissfinal",
+        "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "152.96.80.47",
         "id": "bridge",
         "key_field": "",
-        "password": "postgres",
         "project": "osm-bright-master",
         "srs": null,
         "table": "( SELECT way, COALESCE(highway, railway) AS type, 1 AS bridge, access, render, layer, 0 as tunnel,\n  CASE\n    WHEN highway IN ('motorway', 'trunk') THEN 'motorway'\n    WHEN highway IN ('primary', 'secondary') THEN 'mainroad'\n    WHEN highway IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'\n    WHEN highway IN ('service', 'track') THEN 'service'\n    WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'\n    WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    ELSE 'other' END AS stylegroup\n  FROM (\n    SELECT *, '1_outline' AS render FROM planet_osm_line\n    WHERE bridge NOT IN ('', '0', 'no')\n    UNION ALL\n    SELECT *, '2_line' AS render FROM planet_osm_line\n    WHERE bridge NOT IN ('', '0', 'no')\n    UNION ALL\n    SELECT *, '3_inline' AS render FROM planet_osm_line\n    WHERE bridge NOT IN ('', '0', 'no')\n  ) AS bridges\n  ORDER BY layer ASC, render ASC\n) AS data",
-        "type": "postgis",
-        "user": "postgres"
+        "type": "postgis"
       },
       "class": "",
       "geometry": "linestring",
@@ -613,12 +502,9 @@
     },
     {
       "Datasource": {
-        "dbname": "osmswissfinal",
+        "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
-        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-populated-places-simple.zip",
-        "host": "152.96.80.47",
-        "password": "postgres",
-        "user": "postgres"
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-populated-places-simple.zip"
       },
       "class": "",
       "geometry": "point",
@@ -629,18 +515,15 @@
     },
     {
       "Datasource": {
-        "dbname": "osmswissfinal",
+        "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "152.96.80.47",
         "id": "place",
         "key_field": "",
-        "password": "postgres",
         "project": "SwissOSM",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, place AS type, name, z_order, population\n  FROM planet_osm_point\n  WHERE place in ('country', 'state', 'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'locality')\n  ORDER BY population DESC NULLS LAST\n) AS data",
-        "type": "postgis",
-        "user": "postgres"
+        "type": "postgis"
       },
       "class": "",
       "geometry": "point",
@@ -665,11 +548,7 @@
         "geometry_field": "",
         "extent_cache": "auto",
         "extent": "646450.383495756,5750606.13244708,1194143.1130186,6117386.56995709",
-        "host": "152.96.80.47",
-        "port": "5432",
-        "user": "postgres",
-        "password": "postgres",
-        "dbname": "osmswissfinal"
+        "dbname": "gis"
       },
       "id": "POI_lines",
       "class": "",
@@ -680,18 +559,15 @@
     },
     {
       "Datasource": {
-        "dbname": "osmswissfinal",
+        "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "152.96.80.47",
         "id": "landuse_label",
         "key_field": "",
-        "password": "postgres",
         "project": "foss4g-2011",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type,\n    name, way_area AS area,\n    ST_PointOnSurface(way) AS way\n  FROM planet_osm_polygon\n  WHERE name IS NOT NULL\n    AND way && !bbox!\n    AND ST_IsValid(way)\n\n  UNION ALL\n\n  SELECT 'building' AS type, name, way_area AS area,\n    ST_PointOnSurface(way) AS way\n  FROM planet_osm_polygon\n  WHERE name IS NOT NULL\n    AND building NOT IN ('', 'no', '0', 'false')\n    AND way && !bbox!\n    AND ST_IsValid(way)\n  ORDER BY area DESC\n) AS data",
-        "type": "postgis",
-        "user": "postgres"
+        "type": "postgis"
       },
       "class": "",
       "geometry": "point",
@@ -703,18 +579,15 @@
     },
     {
       "Datasource": {
-        "dbname": "osmswissfinal",
+        "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "152.96.80.47",
         "id": "motorway_label",
         "key_field": "",
-        "password": "postgres",
         "project": "foss4g-2011",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, highway AS type, name, ref, oneway, CHAR_LENGTH(ref) AS reflen\n    FROM planet_osm_line\n    WHERE highway IN ('motorway', 'trunk')\n      AND (name IS NOT NULL OR ref IS NOT NULL)\n) AS data",
-        "type": "postgis",
-        "user": "postgres"
+        "type": "postgis"
       },
       "class": "",
       "geometry": "linestring",
@@ -726,18 +599,15 @@
     },
     {
       "Datasource": {
-        "dbname": "osmswissfinal",
+        "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "152.96.80.47",
         "id": "mainroad_label",
         "key_field": "",
-        "password": "postgres",
         "project": "foss4g-2011",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, highway AS type, name, oneway\n  FROM planet_osm_line\n  WHERE (name IS NOT NULL OR oneway IN ('yes', 'true', '1', '-1'))\n    AND highway IN ('primary', 'secondary', 'tertiary')\n) AS data",
-        "type": "postgis",
-        "user": "postgres"
+        "type": "postgis"
       },
       "class": "",
       "geometry": "linestring",
@@ -749,18 +619,15 @@
     },
     {
       "Datasource": {
-        "dbname": "osmswissfinal",
+        "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "152.96.80.47",
         "id": "minorroad_label",
         "key_field": "",
-        "password": "postgres",
         "project": "foss4g-2011",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, highway AS type, name, oneway\n  FROM planet_osm_line\n  WHERE (name IS NOT NULL OR oneway IN ('yes', 'true', '1', '-1'))\n    AND highway IN ('residential', 'unclassified', 'road', 'living_street', 'unknown')\n) AS data",
-        "type": "postgis",
-        "user": "postgres"
+        "type": "postgis"
       },
       "class": "",
       "geometry": "linestring",
@@ -772,18 +639,15 @@
     },
     {
       "Datasource": {
-        "dbname": "osmswissfinal",
+        "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "152.96.80.47",
         "id": "waterway_label",
         "key_field": "",
-        "password": "postgres",
         "project": "foss4g-2011",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, waterway AS type, name\n  FROM planet_osm_line\n  WHERE waterway IN ('canal', 'river', 'stream') \n    AND name IS NOT NULL\n) AS data",
-        "type": "postgis",
-        "user": "postgres"
+        "type": "postgis"
       },
       "class": "",
       "geometry": "linestring",
@@ -808,11 +672,7 @@
         "geometry_field": "",
         "extent_cache": "auto",
         "extent": "646450.383495756,5750606.13244708,1194143.1130186,6117386.56995709",
-        "host": "152.96.80.47",
-        "port": "5432",
-        "user": "postgres",
-        "password": "postgres",
-        "dbname": "osmswissfinal",
+        "dbname": "gis",
         "id": "POI_points",
         "project": "OSMSwissStyle",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
