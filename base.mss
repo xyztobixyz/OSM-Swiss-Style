@@ -172,9 +172,28 @@ Map { background-color: @land; }
 /* ================================================================== */
 
 
-#admin[admin_level=4][zoom>1] {
+#admin[admin_level='2'][zoom>1] {
   line-color:@admin_2;
-  line-width:0.5;
+  [zoom=2] { line-opacity: 0.25; }
+  [zoom=3] { line-opacity: 0.3; }
+  [zoom=4] { line-opacity: 0.4; }
+  [zoom <= 8]{
+    line-width:2;
+  }
+  [zoom > 8]{
+    line-width:10;
+    line-opacity:0.3;
+    line-offset:-6;
+    ::boundary{
+      line-width:2;
+      line-color:@admin_2;
+    }
+  }
+}
+
+#admin[admin_level='4'][zoom>6] {
+  line-color:@admin_2;
+  line-dasharray: 7, 2;
   [zoom=2] { line-opacity: 0.25; }
   [zoom=3] { line-opacity: 0.3; }
   [zoom=4] { line-opacity: 0.4; }
