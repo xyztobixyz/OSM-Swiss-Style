@@ -322,6 +322,29 @@
       "srs-name": "900913"
     },
     {
+      "extent": [
+        5.9272089307820375,
+        45.81263545243758,
+        10.624189991996108,
+        47.8127907822122
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT way, admin_level\nFROM planet_osm_polygon\nWHERE boundary = 'administrative'\nAND admin_level IN ('2')\n)as data",
+        "key_field": "",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "659813.88,5750374.59,1182679.42,6075766.21",
+        "dbname": "gis"
+      },
+      "id": "admin_land_poly",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "admin_land_poly"
+    },
+    {
       "Datasource": {
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",

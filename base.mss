@@ -172,7 +172,7 @@ Map { background-color: @land; }
 /* ================================================================== */
 
 
-#admin[admin_level='2'][zoom>1] {
+#admin_land_poly[admin_level='2'][zoom>1] {
   line-color:@admin_2;
   [zoom=2] { line-opacity: 0.25; }
   [zoom=3] { line-opacity: 0.3; }
@@ -183,7 +183,7 @@ Map { background-color: @land; }
   [zoom > 8]{
     line-width:10;
     line-opacity:0.3;
-    line-offset:-6;
+    line-offset:6;
     ::boundary{
       line-width:2;
       line-color:@admin_2;
