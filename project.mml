@@ -21,8 +21,7 @@
     "palette.mss",
     "base.mss",
     "roads.mss",
-    "labels.mss",
-    "POIs.mss"
+    "labels.mss"
   ],
   "Layer": [
     {
