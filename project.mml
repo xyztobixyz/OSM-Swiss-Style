@@ -509,19 +509,6 @@
       "Datasource": {
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
-        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-populated-places-simple.zip"
-      },
-      "class": "",
-      "geometry": "point",
-      "id": "ne_places",
-      "name": "ne_places",
-      "srs": "",
-      "srs-name": "autodetect"
-    },
-    {
-      "Datasource": {
-        "dbname": "gis",
-        "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
         "id": "place",
         "key_field": "",
